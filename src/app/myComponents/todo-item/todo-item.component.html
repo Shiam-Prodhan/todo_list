@@ -1,0 +1,15 @@
+<div id="middle">
+  <h5>{{ todo.title }}</h5>
+  <p>{{ todo.description }}</p>
+  <div id="options">
+    <div id="check">
+      <button type="button" class="btn btn-sm btn-success">Success</button>
+    </div>
+    <div id="delete">
+      <button id="button" type="button" (click)="onDelete(todo)" class="btn btn-sm btn-danger">
+        Delete
+      </button>
+    </div>
+  </div>
+</div>
+<hr id="divider"/>

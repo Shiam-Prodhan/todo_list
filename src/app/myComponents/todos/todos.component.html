@@ -1,20 +1,23 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">ToDO_List</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            
-          </ul>
-          <img src="../../../favicon.ico" class="d-flex" id ="iconfile">
-        </div>
-      </div>
-    </nav>
+<div id="middle">
+  <!-- <h3 id="borderBottom">Add a new task</h3> -->
+
+  <p>
+    <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      Add New Tasks
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+      <app-add-todo> </app-add-todo>
+    </div>
+  </div>
+
+
+  <h3 id="borderBottom">Your Tasks</h3>
+</div>
+<div *ngFor="let todo of todos">
+  <app-todo-item
+    [todo]="todo"
+    (todoDelete)="deleteTodo($event)"
+  ></app-todo-item>
+</div>

@@ -4,11 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TodosComponent } from './myComponents/todos/todos.component';
+import { TodoItemComponent } from './myComponents/todo-item/todo-item.component';
+import { AddTodoComponent } from './myComponents/add-todo/add-todo.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodosComponent
+    TodosComponent,
+    TodoItemComponent,
+    AddTodoComponent
   ],
   imports: [
     BrowserModule,
@@ -17,4 +22,5 @@ import { TodosComponent } from './myComponents/todos/todos.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+}
