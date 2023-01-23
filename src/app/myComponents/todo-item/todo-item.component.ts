@@ -10,8 +10,13 @@ import { ToDo } from 'src/app/ToDo';
 export class TodoItemComponent {
   @Input() todo: ToDo;
   @Output() todoDelete: EventEmitter<ToDo> = new EventEmitter();
+  @Output() todoCheckbox: EventEmitter<ToDo> = new EventEmitter();
   onDelete(todo: ToDo) {
     this.todoDelete.emit(todo);
     console.log('Delete button is clicked');
   }
+  onCheck(todo){
+    this.todoCheckbox.emit(todo)
+  }
+  
 }
