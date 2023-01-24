@@ -10,6 +10,7 @@ export class AddTodoComponent {
 
   title: string
   desc:string
+  deadLine: string
   active: boolean
   @Output() todoAdd: EventEmitter<ToDo> = new EventEmitter();
   
@@ -17,7 +18,7 @@ export class AddTodoComponent {
     const todo = {
       title: this.title,
       description:this.desc,
-      active: this.active
+      deadline:this.deadLine
     }
     this.todoAdd.emit(todo)
   }

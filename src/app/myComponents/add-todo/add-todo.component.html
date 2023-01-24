@@ -1,7 +1,8 @@
-<form (ngSubmit)="onSubmit()">
+<form #submitForm="ngForm" (ngSubmit)="onSubmit(); submitForm.reset();">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Title</label>
     <input
+      required
       type="text"
       [(ngModel)]="title"
       name="title"
@@ -14,10 +15,22 @@
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Description</label>
     <input 
+    required
     type="text" 
     [(ngModel)]="desc"
     name="desc"
     id="desc"
+    class="form-control" 
+    id="exampleInputPassword1" />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Deadline</label>
+    <input 
+    required
+    type="date" 
+    [(ngModel)]="deadLine"
+    name="deadLine"
+    id="deadLline"
     class="form-control" 
     id="exampleInputPassword1" />
   </div>

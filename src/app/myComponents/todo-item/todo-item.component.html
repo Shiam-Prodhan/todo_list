@@ -1,8 +1,8 @@
 <div id="middle">
   <h5>{{ todo.title }}</h5>
   <p>{{ todo.description }}</p>
+  <p>Deadline: {{ todo.deadline }}</p>
   <div id="options">
-    
     <div id="delete">
       <button  type="button" (click)="onDelete(todo)" class="btn btn-sm btn-danger">
         Done

@@ -11,12 +11,7 @@
   margin-right: 0px;
   font-size: 10px;
 }
-#check {
-  display: block;
-  margin-left: 0px;
-  margin-right: auto;
-  font-size: 10px;
-}
+
 
 #options {
   display: flex;
